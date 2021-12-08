@@ -657,7 +657,7 @@
             keywords = keywords.filter((n) => n != '');
             for(let i = 0; i < keywords.length; i++){
                 search += "&";
-                search += key + "=" + keywords[i] + "*";
+                search += key + "=" + keywords[i];
             }
         }
 
@@ -674,7 +674,6 @@
             addSearchKey("NewsText", $("#search_text").val());
 
             queryString += search;
-
             updateUI();
         }
 

@@ -65,6 +65,8 @@ module.exports =
             if (Number.isInteger(value)){
                 value = value.toString();
             }
+            if (value.includes(searchValue))
+                return true;
             try {
                 return new RegExp('^' + searchValue.toLowerCase().replace(/\*/g, '.*') + '$').test(value.toLowerCase());
             } catch (error) {
