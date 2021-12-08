@@ -2,8 +2,8 @@
     Méthodes d'accès aux services Web API_Server/bookmarks
  */
 
-const apiBaseURL= "http://localhost:5000";
-//const apiBaseURL= "https://harsh-sticky-peak.glitch.me"
+//const apiBaseURL= "http://localhost:5000";
+const apiBaseURL= "https://rune-literate-scaffold.glitch.me"
 
 function tokenRequestURL() {
     return apiBaseURL + '/token';
