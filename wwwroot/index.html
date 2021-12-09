@@ -583,6 +583,9 @@
         function unsetUsername() {
             $("#username").html("<span style='color:gray'>non connecté</span>");
         }
+        function unsetAvatar() {
+            $(".avatar").html("<img class='avatar' src='images/No_Avatar.png'></img>");
+        }
         function failLogin() {
             Alert("Connexion échouée");
             connected = false;
@@ -607,8 +610,8 @@
                 $('#btn_OpenProfilDialog').attr("tooltip", "Profil");
             }
             else {
-                //$("#avatarContainer").empty();
                 unsetUsername();
+                unsetAvatar();
                 $("#btn_OpenLoginForm").show();
                 $("#btn_OpenConfirmLogout").hide();
                 $("#btn_OpenAddnewsDialog").hide();
