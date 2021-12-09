@@ -17,6 +17,7 @@ class User{
         validator.addField('Name','string');
         validator.addField('Email','email');
         validator.addField('Created','integer');
+        //validator.addField('AvatarGUID', 'string');
         return validator.test(instance);
     }
 }

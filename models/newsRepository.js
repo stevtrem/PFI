@@ -45,6 +45,13 @@ class NewsRepository extends Repository {
     }
     update(news) {
         news["Created"] = 0; // will take the original creation date, see lower
+
+        let previousData;
+        if (news['ImageGUID'] == ''){
+            previousData = this.get(news['Id']);
+            news['ImageGUID'] = previousData['ImageGUID'];
+        }
+
         if (News.valid(news)) {
             let foundNews = super.get(news.Id);
             if (foundNews != null) {
